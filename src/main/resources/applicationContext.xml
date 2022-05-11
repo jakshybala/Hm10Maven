@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="animalBean" class="grey.mavenHW.Bars">
+        <property name="name" value="White Bars"/>
+        <property name="species" value="TyanShan"/>
+        <property name="color" value="White and grey"/>
+
+    </bean>
+
+    <bean id="friendAnimalBean" class="grey.mavenHW.Bars">
+        <property name="name" value="Snow Bars"/>
+        <property name="species" value="Asian"/>
+        <property name="color" value="White and Black"/>
+
+    </bean>
+
+
+    <bean id="myFavoriteAnimalBean" class="grey.mavenHW.Person">
+        <constructor-arg ref="animalBean"/>
+    </bean>
+
+    <bean id="friendAnimals" class="grey.mavenHW.Person">
+        <constructor-arg ref="friendAnimalBean"/>
+    </bean>
+
+
+
+
+</beans>
